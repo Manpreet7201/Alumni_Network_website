@@ -1,0 +1,45 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+/* src/components/Header.css */
+.header {
+    position: relative;
+    text-align: center;
+  }
+  
+  .header-image {
+    width: 99%;
+    height: auto;
+    /* padding-left: 10px;
+    padding-right: 10px; */
+  }
+  
+  .header-text {
+    font-family: 'Merienda One',cursive;
+    position: absolute;
+    bottom: 10%;
+    /* left: 60%; */
+    right: 5%;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  /* src/components/Content.css */
+ 
+  
+  /* src/components/Footer.css */
+  /* .footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .explore-button {
+    background-color: #e04c4c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+   */

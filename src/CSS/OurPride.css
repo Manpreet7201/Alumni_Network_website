@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&family=Maitree:wght@200;300;400;500;600;700&display=swap');
+
+.PrideSection {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: 'Maitree';
+  font-size: 2.1rem;
+  color: #211F1F;
+  text-align: center;
+  margin-bottom: 20px;
+}
+    
+.pride-section {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  width: 80%;
+  max-width: 100%; 
+  height: 100%;
+  position: relative;
+}
+ 
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100%; 
+  overflow: hidden;
+  height: auto; 
+  max-height: 90%; 
+  position: relative;
+}
+/*        
+.slider-btn {
+  font-size: 48px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9b9999;
+  font-weight: lighter;
+  padding: 10px;
+  position: relative;
+  z-index: 10; 
+}
+    
+.slider-btn:hover {
+  color: #413f3f;
+}
+*/
+
+/* .image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100%; 
+  overflow: hidden;
+  height: auto; 
+  max-height: 500px; 
+  position: relative; 
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100%; 
+  overflow: hidden;
+  height: 500px;
+} */
+
+.my-image {
+  width: 100%; 
+  height: auto; 
+  object-fit: contain; 
+  transition: transform 0.6s ease, filter 0.4s ease; 
+  filter: brightness(0.9) contrast(1.1);  
+}
+   
+.image-container:hover .my-image {
+  transform: scale(1.05); 
+  filter: brightness(1.2) contrast(1.2);
+}
+
+.image-details {
+  position: absolute; 
+  bottom: 0.8rem; /* 0.8em = 12.8px*/
+  left: 0;
+  right: 0;
+  padding: 10px;
+  /* font-size: 20px;  */
+  font-size: 1.3rem; 
+  font-family: 'Maitree';
+  color: #615A5A;
+  font-weight: 7600;
+  text-align: center;
+  background: rgba(228, 226, 226, 0.7); 
+}
+
+.slider-btn {
+  font-size: 3rem; 
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9b9999;
+  font-weight: lighter;
+  padding: 10px;
+  position: absolute; 
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10; 
+}
+
+    
+.slider-btn.prev-btn {
+  left: 10px;
+}
+
+.slider-btn.next-btn {
+  right: 10px;
+}
+
+.slider-btn:hover {
+  color: #413f3f;
+}
+
+@media (max-width: 768px) {
+  .my-image {
+    height: auto;
+  }
+  
+  .image-details {
+    font-size: 1rem; 
+    padding: 5px; 
+  }
+  
+  .slider-btn {
+    font-size: 2rem; 
+  }
+}
+
+

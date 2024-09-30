@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&family=Maitree:wght@200;300;400;500;600;700&display=swap');
+
+.login-container {
+    font-family: 'Maitree';
+    max-width: 90%;
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #cec9c9;
+    box-shadow: 0 0 10px rgba(233, 17, 17, 0.1);
+    box-sizing: border-box;
+    /* display: flex;
+    flex-direction: column; */
+  }
+  .h2login{
+    color: #EF4545;
+  }
+  strong {
+    color: #EF4545;
+  }
+  .login-form{
+    margin-top: 20px;
+  }
+
+  .error {
+    margin-top:0px;
+    visibility: hidden;
+    color: red;
+    position: absolute;
+  }
+  .error::after{
+    content: ' !';
+  }
+  .error.active {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    visibility: visible;
+  }
+ .login-form .form-group {
+  position: relative;
+    margin-bottom: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .login-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .login-form .form-group input {
+    width: 100%;
+    font-family: 'Maitree';
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #BCB7B7;
+    &:hover{
+      border: none;
+      background-color: #F3EAEA;
+    }
+  
+  }
+
+  .login-button{
+    font-family: 'Maitree';
+    background-color: #EF4545;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    width: 20%;
+    margin-bottom: 20px; 
+    border-radius: 5px;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease; 
+    &:hover {
+      background-color:#D43D3D ;
+    }
+  }
+
+   .reset-password-section {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Maitree';
+    box-sizing: border-box; 
+    margin-top: 20px;
+    background-color: #F3EAEA;
+    width: 50%;
+    padding: 10px;
+    padding-top: 0px;
+    border-radius: 10px;
+    box-shadow: 0 4x 8px rgba(0,0,0,0.1);
+}
+
+.h3div {
+  color: #EF4545;
+  font-size: 1.4rem ;
+  margin-bottom: 5px;
+}
+.pdiv {
+  margin-top: 0px;
+  color: #666;
+  font-size: 1.0rem ;
+}
+.reset-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start; 
+    width: 100%;
+    gap: 10px; 
+}
+
+.reset-form input {
+    width: 50%; 
+    padding: 10px;
+    font-size: 0.8;
+    margin: 5px 0; 
+    border: none;
+    padding: 14px 10px;
+    border-radius: 5px; 
+}
+
+.reset-form .reset-button{
+  font-family: 'Maitree';
+    background-color: #EF4545;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    width: 40%;
+    margin-bottom: 20px; 
+    border-radius: 5px;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    &:hover {
+      background-color:#D43D3D ;
+    }
+    transition: background-color 0.3s ease; 
+}
+
+
+/* ############ SIGN UP PAGE ######### */
+.signUp-container {
+  font-family: 'Maitree';
+  max-width: 90%;
+  width: 100%;
+  /* height: 100vh; */
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #cec9c9;
+  box-shadow: 0 0 10px rgba(233, 17, 17, 0.1);
+  box-sizing: border-box;
+}
+.h2SignUp{
+  color: #EF4545;
+}
+
+strong {
+  color: #EF4545;
+}
+.signUp-container h4 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.SignUp-form {
+  margin-top: 15px;
+}
+
+.SignUp-form .form-row{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+.SignUp-form .form-group {
+  width: 100%;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.SignUp-form .form-group label, .SignUp-form .form-group1 label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.SignUp-form .form-group input, .SignUp-form .form-group select {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #BCB7B7;
+  &:hover{
+    background-color:#F3EAEA;
+    border: none;
+  }
+}
+.SignUp-form .form-group1 textarea {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  background-color: #BCB7B7;
+  &:hover{
+    background-color:#F3EAEA;
+    border: none;
+  }
+}
+.SignUp-form .form-row1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.SignUp-form .next-button, .SignUp-form .previous-button {
+  font-family: 'Maitree';
+  background-color: #EF4545;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  width: 20%;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.next-button:hover, .previous-button:hover {
+  background-color: #D43D3D;
+}

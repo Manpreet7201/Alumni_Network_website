@@ -1,0 +1,146 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&family=Maitree:wght@200;300;400;500;600;700&display=swap');
+.header {
+    padding: 20px;
+}
+
+.top-bar {
+    background-color: #EF4545; 
+    padding: 20px 10px;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    /* width: 100%; */
+}
+
+.login button {
+    font-family: 'Maitree';
+    font-size: 26px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-bottom: 2px solid transparent; 
+    &:hover{
+        /* border-bottom-color: white; */
+        border-bottom: 1px solid white;
+        transition: border-bottom 0.1s ease-in-out ;
+    }
+}
+.bottom-bar{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    width: 100%;
+}
+
+.eternal {
+    font-family: 'Maitree';
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.alumni-hub {
+    font-family: 'Macondo Swash Caps',cursive;
+    color: #FD1010;
+    font-size: 24px;
+    padding-left: 180px;
+    /* font-style: italic; */
+}
+.line{
+    margin-top: 5px;
+    /* width: 95%; */
+    /* margin-left: 30px; */
+    border-bottom: 1px solid #948C8C;
+}
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    /* width: 100%; */
+}
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    gap: 100px;
+    /* flex-wrap: wrap; */
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+
+.nav-bar a {
+    text-decoration: none;
+    color: #494747;
+    font-family: 'Macondo Swash Caps',cursive;
+    font-size: 22px;
+    &:hover{
+        /* border-bottom-color: white; */
+        border-bottom: 1px solid #4F4B4B;
+        transition: border-bottom 0.1s ease-in-out ;
+    }
+}
+
+@media (max-width: 930px) {
+    .nav-bar ul {
+        gap: 30px; 
+    }
+}
+
+@media (max-width:768px){
+    .top-bar{
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 15px 5px;
+    }
+    .login button {
+        font-size: 24px;
+    }
+    .bottom-bar{
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    .eternal {
+        font-size: 30px;
+    }
+    .alumni-hub {
+        padding-left: 50px;
+        margin-top: 5px; 
+        font-size: 22px;
+    }
+    
+    .nav-bar ul {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    .nav-bar a {
+        font-size: 18px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .eternal {
+        font-size: 28px;
+    }
+
+    .alumni-hub {
+        font-size: 20px;
+    }
+
+    .nav-bar a {
+        font-size: 16px;
+    }
+
+    .nav-bar ul {
+        gap: 10px;
+    }
+
+    .login button {
+        font-size: 18px;
+    }
+}

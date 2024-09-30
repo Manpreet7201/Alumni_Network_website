@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&family=Maitree:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
+.my_text {
+    margin-left: 5px;
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.h4{
+    font-family: 'Maitree', cursive;
+    font-size: 36px;
+    text-transform:capitalize;
+    word-spacing: 1.4px;
+    text-wrap: wrap;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.my_button a {
+    font-family: 'Maitree';
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+    background-color: #EF4545;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover {
+      background-color: #d03e3e;
+    }
+    margin-bottom: 30px;
+}
+  
+.My_line{
+    width: 70%;
+    border-bottom: 1px solid #b9b4b4;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.benefits {
+    text-align: center; 
+    margin-top: 20px;
+    margin-bottom: 10px;
+    /* padding-top: 10px; */
+    padding-bottom: 20px;
+    background-color:  rgb(230, 228, 228);
+}
+  
+.h5 {
+    font-family: 'Maitree', sans-serif;  
+    font-size: 2.2rem;  
+    color: #333;  
+    font-weight: 600;  
+    /* margin-top: 20px;  */
+    margin-bottom: 20px; 
+    text-align: center; 
+}
+
+.icons-info-container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    gap: 10px; 
+    padding: 0px;
+}
+  
+.icon-info {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    /* justify-content: left; */
+    width: 450px; 
+    
+}
+  
+.icon {
+    margin-top: 10px;
+    font-size: 2.2rem;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+}
+
+  
+.icon-info p {
+    font-family: "Maitree";
+    font-size: 1.3rem;
+    color: #EF4545;
+    margin: 0; 
+    
+}
+
+.my_text2 {
+    margin-left: 5px;
+    margin-top: 10px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-bottom: 10px;
+}
+.h6{
+    font-family: 'Maitree';
+    font-size: 1.4rem;
+    text-transform:capitalize;
+    word-spacing: 1.4px;
+    text-wrap: wrap;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+

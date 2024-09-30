@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&family=Maitree:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
+/*.Container{
+  margin: 0 auto;  
+  max-width: 800px; 
+  width: 100%;
+  box-sizing: border-box; 
+ }
+
+h2 {
+  font-family: 'Maitree';
+  font-size: 35px;
+  color: #211F1F;
+  text-align: center;
+}
+
+.Slider{
+  /* margin: 0 auto;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px; 
+  width: 100%; 
+}
+
+.Content_box{
+  position: relative;
+  overflow: hidden;
+  border: 8px solid #d2d2d3;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.Slider_image {
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+}
+.Slider_controls{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.prev_btn, .next_btn{
+  font-family: 'Maitree';
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
+  background-color: #EF4545;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  &:hover{
+    background-color: #d03e3e;
+  }
+  
+}
+.dots{
+  text-align: center;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+.dot.active{
+  background-color: #d03e3e;
+} 
+
+.my_button{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 25px;
+}
+.my_button a{
+  font-family: 'Maitree';
+  font-size: 18px;
+  width: 15%;
+  color: white;
+  font-weight: 600;
+  background-color: #EF4545;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover{
+    background-color: #d03e3e;
+  }
+} 
+*/
+
+.Container {
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.Header {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; 
+}
+
+h2 {
+  font-family: 'Maitree';
+  font-size: 30px;
+  color: #211F1F;
+  margin: 0; 
+}
+
+.my_button {
+  display: flex;
+  align-items: center;
+}
+
+.my_button a {
+  font-family: 'Maitree';
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+  background-color: #EF4545;
+  border: none;
+  padding: 10px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    background-color: #d03e3e;
+  }
+}
+
+.Slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+.Content_box {
+  position: relative;
+  overflow: hidden;
+  border: 8px solid #d2d2d3;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.Slider_image {
+  width: 100%;
+  height: 500px;
+  /* object-fit: contain; */
+}
+
+.Slider_controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.prev_btn,
+.next_btn {
+  font-family: 'Maitree';
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
+  background-color: #EF4545;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  &:hover {
+    background-color: #d03e3e;
+  }
+}
+
+.dots {
+  text-align: center;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #d03e3e;
+}
+
+
+@media (max-width:768px) {
+  .Container{
+    max-width: 90%;
+  }
+  .Header {
+    flex-direction: column; 
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  h2 {
+    font-size: 24px; 
+  }
+
+  .my_button a {
+    font-size: 14px; 
+    padding: 8px 8px; 
+  }
+
+  .Slider_image {
+    height: 400px; 
+  }
+
+  .prev_btn, .next_btn {
+    font-size: 16px; 
+    padding: 8px 14px;
+  }
+
+  .dot {
+    height: 11px; 
+    width: 11px;
+  }
+}

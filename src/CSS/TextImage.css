@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&family=Maitree:wght@200;300;400;500;600;700&display=swap');
+
+.my_Container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+    background-color: rgb(230, 228, 228);
+}
+.Container_Image {
+    display: flex;
+    align-items: center; 
+    width: 90%; 
+    max-width: 1200px; 
+    box-sizing: border-box; 
+    margin-bottom: 40px;
+}
+.my_image, .my_para{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    flex: 1;
+    box-sizing: border-box;
+}
+.my_image{
+    margin-right: 60px;
+}
+.my_image img{
+    width: 100%; 
+    height: auto; 
+}
+.my_para{
+    margin-top: 10px;
+    text-align: start;
+    font-family: 'Maitree';
+    font-size: 0.9rem;
+    line-height: 1.3;
+    color: #333;
+    padding-left: 5px;
+    font-weight: 500;
+    border: 1px solid rgb(196, 193, 193);
+    width: 100%;         
+    max-width: 600px;      
+    box-sizing: border-box;
+    box-shadow: 2px 2px 2px 1.4px rgb(196, 193, 193);
+}
+/* .Myline{
+    width: 90%;
+    border-bottom: 1px solid #948C8C;
+    margin-left: auto;
+    margin-right: auto;
+  } */
+
+@media (max-width:768px) {
+    .Container_Image{
+        flex-direction: column;
+        width: 100%;
+        /* margin-left: 100px; */
+    }
+    .my_image {
+        margin-right: 0; 
+    }
+
+    .my_image img {
+        width: 100%; 
+    }
+
+    .my_para {
+        font-size: 14px; 
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .Container_Image {
+        width: 100%; 
+    }
+
+    .my_para {
+        font-size: 12px; 
+        padding: 5px; 
+        max-width: 100%;
+    }
+
+    .my_image img {
+        width: 100%; 
+    }
+
+    .Myline {
+        width: 100%; 
+    }
+  }

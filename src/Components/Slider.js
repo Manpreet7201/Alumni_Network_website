@@ -71,7 +71,7 @@ const My_slider = () => {
       <div className="Header">
         <h2>Alumni - Leading the Way!</h2>
         <div className="my_button">
-          <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+          <a href="/alumni-connect" rel="noopener noreferrer">
             Explore Alumni
           </a>
         </div>

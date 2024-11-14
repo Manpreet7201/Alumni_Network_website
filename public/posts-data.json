@@ -1,0 +1,380 @@
+[
+    {
+      "id": 1,
+      "author": "John Doe",
+      "profession": "Software Engineer",
+      "authorAvatar": "/avatars/johndoe.png",
+      "date": "2024-10-09T15:20:00Z",
+      "title": "Top Courses for 2024: Learn from Google, IBM, and More—For Free!",
+      "content": "Master high-demand skills with top courses from industry giants like Google, IBM, and Meta—all for free! Secure your future with these high-paying courses and boost your career to new heights. \n No prerequisites required. \n Gain free access to over 7000 courses: https://link.example",
+      "links": [
+        {
+          "title": "Google Data Analytics",
+          "url": "https://link.example/GoogleDataAnalytics"
+        },
+        {
+          "title": "Data Science Professional Certificate",
+          "url": "https://link.example/DataScienceCertificate"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "author": "Jane Smith",
+      "profession": "Data Scientist",
+      "authorAvatar": "/avatars/janesmith.png",
+      "date": "2024-10-10T10:15:00Z",
+      "title": "Free Webinars on AI and Machine Learning",
+      "content": "Join top professionals in AI and Machine Learning for free webinars this October. Gain insights from industry leaders and experts, and boost your knowledge in emerging technologies.",
+      "links": [
+        {
+          "title": "AI Webinar Registration",
+          "url": "https://link.example/AIWebinar"
+        },
+        {
+          "title": "ML Certification Courses",
+          "url": "https://link.example/MLCertification"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "author": "David Miller",
+      "profession": "Cybersecurity Analyst",
+      "authorAvatar": "/avatars/davidmiller.png",
+      "date": "2024-10-08T13:45:00Z",
+      "title": "Top Cybersecurity Certifications for 2024",
+      "content": "Boost your cybersecurity career with these top certifications! From CompTIA Security+ to Certified Ethical Hacker, learn what it takes to advance your skills.",
+      "links": [
+        {
+          "title": "CompTIA Security+ Certification",
+          "url": "https://link.example/CompTIA"
+        },
+        {
+          "title": "Certified Ethical Hacker Course",
+          "url": "https://link.example/CEH"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "author": "Emma Green",
+      "profession": "Project Manager",
+      "authorAvatar": "/avatars/emmageen.png",
+      "date": "2024-10-06T14:00:00Z",
+      "title": "Mastering Agile: Free Courses for Project Managers",
+      "content": "Agile methodology is transforming the project management landscape. These free resources will help you master Agile for your next big project.",
+      "links": [
+        {
+          "title": "Free Agile Courses",
+          "url": "https://link.example/AgileCourses"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "author": "Sophie Turner",
+      "profession": "UI/UX Designer",
+      "authorAvatar": "/avatars/sophieturner.png",
+      "date": "2024-10-07T17:50:00Z",
+      "title": "Top UI/UX Trends for 2024",
+      "content": "Stay ahead of the curve by learning about the latest trends in UI/UX design for 2024. From dark mode to voice UI, discover what's next in user experience design.",
+      "links": [
+        {
+          "title": "UI/UX Design Trends",
+          "url": "https://link.example/UIUXTrends"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "author": "Mark Johnson",
+      "profession": "DevOps Engineer",
+      "authorAvatar": "/avatars/markjohnson.png",
+      "date": "2024-10-05T09:30:00Z",
+      "title": "DevOps Tools You Should Master",
+      "content": "A comprehensive guide to the DevOps tools that every engineer should know. From Docker to Jenkins, find out which tools are in demand in 2024.",
+      "links": [
+        {
+          "title": "Master Docker",
+          "url": "https://link.example/DockerMaster"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "author": "Rachel Adams",
+      "profession": "Data Engineer",
+      "authorAvatar": "/avatars/racheladams.png",
+      "date": "2024-10-03T12:25:00Z",
+      "title": "Best Practices in Data Engineering",
+      "content": "Learn the best practices in data engineering to optimize pipelines, ensure data quality, and manage big data efficiently.",
+      "links": [
+        {
+          "title": "Data Engineering Best Practices",
+          "url": "https://link.example/DataBestPractices"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "author": "Oliver King",
+      "profession": "Cloud Architect",
+      "authorAvatar": "/avatars/oliverking.png",
+      "date": "2024-10-02T14:10:00Z",
+      "title": "Cloud Certifications to Advance Your Career",
+      "content": "The top cloud certifications that will make you stand out in 2024. Learn AWS, Azure, and Google Cloud to boost your cloud expertise.",
+      "links": [
+        {
+          "title": "AWS Cloud Certification",
+          "url": "https://link.example/AWS"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "author": "William Brown",
+      "profession": "Blockchain Developer",
+      "authorAvatar": "/avatars/williambrown.png",
+      "date": "2024-10-01T18:45:00Z",
+      "title": "Learn Blockchain Development in 2024",
+      "content": "Get started with blockchain development with these free resources. Learn about smart contracts, Ethereum, and decentralized applications.",
+      "links": [
+        {
+          "title": "Blockchain Development Resources",
+          "url": "https://link.example/BlockchainDev"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "author": "Elena White",
+      "profession": "Digital Marketing Specialist",
+      "authorAvatar": "/avatars/elenawhite.png",
+      "date": "2024-09-30T15:30:00Z",
+      "title": "Digital Marketing Strategies for 2024",
+      "content": "Learn about the most effective digital marketing strategies for 2024. From SEO to social media campaigns, boost your brand's presence online.",
+      "links": [
+        {
+          "title": "Digital Marketing Strategies",
+          "url": "https://link.example/DigitalMarketing"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "author": "Ethan Parker",
+      "profession": "AI Researcher",
+      "authorAvatar": "/avatars/ethanparker.png",
+      "date": "2024-09-29T13:00:00Z",
+      "title": "AI Research Opportunities in 2024",
+      "content": "Explore groundbreaking AI research opportunities and grants for 2024. Stay updated on the latest advancements and projects in the AI industry.",
+      "links": [
+        {
+          "title": "AI Research Grants",
+          "url": "https://link.example/AIResearch"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "author": "Jessica Lee",
+      "profession": "Full-Stack Developer",
+      "authorAvatar": "/avatars/jessicalee.png",
+      "date": "2024-09-28T11:15:00Z",
+      "title": "Learn Full-Stack Development in 2024",
+      "content": "Kickstart your full-stack development career with these top resources and courses. Learn JavaScript, React, Node.js, and more.",
+      "links": [
+        {
+          "title": "Full-Stack Developer Courses",
+          "url": "https://link.example/FullStackDev"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "author": "Jack Wilson",
+      "profession": "Cloud Engineer",
+      "authorAvatar": "/avatars/jackwilson.png",
+      "date": "2024-09-26T16:10:00Z",
+      "title": "Top Cloud Tools for 2024",
+      "content": "Stay ahead in the cloud industry by mastering these cloud tools and platforms. Learn about Terraform, Kubernetes, and other essential tools.",
+      "links": [
+        {
+          "title": "Terraform Course",
+          "url": "https://link.example/Terraform"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "author": "Sarah Walker",
+      "profession": "Business Analyst",
+      "authorAvatar": "/avatars/sarahwalker.png",
+      "date": "2024-09-25T10:50:00Z",
+      "title": "Business Analysis Certifications for 2024",
+      "content": "Get certified as a business analyst with these top courses and certifications for 2024. Enhance your skills in data-driven decision-making.",
+      "links": [
+        {
+          "title": "Business Analyst Certification",
+          "url": "https://link.example/BACertification"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "author": "Daniel Taylor",
+      "profession": "Machine Learning Engineer",
+      "authorAvatar": "/avatars/danieltaylor.png",
+      "date": "2024-09-24T09:30:00Z",
+      "title": "Machine Learning Trends for 2024",
+      "content": "Keep up with the latest machine learning trends for 2024. Learn about federated learning, transfer learning, and other cutting-edge technologies.",
+      "links": [
+        {
+          "title": "Machine Learning Trends",
+          "url": "https://link.example/MLTrends"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "author": "Hannah Harris",
+      "profession": "Backend Developer",
+      "authorAvatar": "/avatars/hannahharris.png",
+      "date": "2024-09-23T13:10:00Z",
+      "title": "Mastering Node.js for Backend Development",
+      "content": "Node.js remains a popular choice for backend development. Learn how to build scalable applications using Node.js and Express.",
+      "links": [
+        {
+          "title": "Node.js Course",
+          "url": "https://link.example/Nodejs"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "author": "Michael Clark",
+      "profession": "Mobile App Developer",
+      "authorAvatar": "/avatars/michaelclark.png",
+      "date": "2024-09-22T15:40:00Z",
+      "title": "Top Mobile App Development Frameworks",
+      "content": "Discover the best mobile app development frameworks in 2024. From React Native to Flutter, find out which framework suits your needs.",
+      "links": [
+        {
+          "title": "React Native vs Flutter",
+          "url": "https://link.example/ReactNativeFlutter"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "author": "Emily Carter",
+      "profession": "Web Developer",
+      "authorAvatar": "/avatars/emilycarter.png",
+      "date": "2024-09-21T14:20:00Z",
+      "title": "Web Development Tools to Master in 2024",
+      "content": "Stay up to date with the best web development tools in 2024. Learn about new frameworks, CSS libraries, and testing tools that will enhance your productivity.",
+      "links": [
+        {
+          "title": "Web Development Tools",
+          "url": "https://link.example/WebDevTools"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "author": "Andrew Brown",
+      "profession": "Software Architect",
+      "authorAvatar": "/avatars/andrewbrown.png",
+      "date": "2024-09-20T11:50:00Z",
+      "title": "Building Scalable Software in 2024",
+      "content": "Learn the key principles of building scalable software systems. From microservices to cloud-native architectures, discover what it takes to handle high traffic.",
+      "links": [
+        {
+          "title": "Software Scalability Principles",
+          "url": "https://link.example/SoftwareScalability"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "author": "Lucy Evans",
+      "profession": "Front-End Developer",
+      "authorAvatar": "/avatars/lucyevans.png",
+      "date": "2024-09-19T18:00:00Z",
+      "title": "Top CSS Frameworks for 2024",
+      "content": "Discover the best CSS frameworks for front-end development in 2024. From Bootstrap to Tailwind CSS, find out which frameworks will enhance your design.",
+      "links": [
+        {
+          "title": "Best CSS Frameworks",
+          "url": "https://link.example/CSSFrameworks"
+        }
+      ]
+    },
+    {
+        "id": 21,
+        "eventName": "Tech Expo 2024",
+        "date": "2024-11-15T09:00:00Z",
+        "location": "Main Auditorium",
+        "description": "Showcase of the latest technology projects from students and faculty. Explore innovative projects, tech startups, and research work.",
+        "eventLinks": [
+          {
+            "title": "Event Details",
+            "url": "https://link.example/TechExpo2024"
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "eventName": "Career Fair 2024",
+        "date": "2024-12-05T10:00:00Z",
+        "location": "University Sports Complex",
+        "description": "Meet with recruiters from top companies, participate in mock interviews, and attend career development workshops.",
+        "eventLinks": [
+          {
+            "title": "Register for Career Fair",
+            "url": "https://link.example/CareerFair2024"
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "eventName": "Alumni Networking Meet",
+        "date": "2024-10-20T17:00:00Z",
+        "location": "Alumni Hall",
+        "description": "A networking event for alumni and students to connect, share experiences, and explore mentorship opportunities.",
+        "eventLinks": [
+          {
+            "title": "RSVP for Networking Meet",
+            "url": "https://link.example/NetworkingMeet2024"
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "eventName": "Research Conference 2024",
+        "date": "2024-11-25T08:30:00Z",
+        "location": "Research Block",
+        "description": "Presentations from leading researchers and professors on current research in engineering, computer science, and healthcare technology.",
+        "eventLinks": [
+          {
+            "title": "Conference Agenda",
+            "url": "https://link.example/ResearchConference2024"
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "eventName": "Cultural Fest 2024",
+        "date": "2024-10-30T18:00:00Z",
+        "location": "University Grounds",
+        "description": "Join us for a celebration of diverse cultures through music, dance, food, and arts, with performances by student groups and guest artists.",
+        "eventLinks": [
+          {
+            "title": "Festival Line-up",
+            "url": "https://link.example/CulturalFest2024"
+          }
+        ]
+      }
+  ]
+  

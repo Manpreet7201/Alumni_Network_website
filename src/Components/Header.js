@@ -1,6 +1,6 @@
 import React from 'react'
 import '../CSS/Header.css'; 
-import {Link , useNavigate} from 'react-router-dom';
+import {NavLink , useNavigate} from 'react-router-dom';
 
 function Header() {
     const navigate = useNavigate();
@@ -30,10 +30,10 @@ return (
                     <li><Link to="/career-resources">Career Resources</Link></li>
                     <li><Link to="/alumni-connect">Alumni Connect</Link></li>
                     <li><Link to="/alumni-profile">Alumni Profile</Link></li> */}
-                    <Link to="/">Home</Link>
-                    <Link to="/career-resources">Career Resources</Link>
-                    <Link to="/alumni-connect">Alumni Connect</Link>
-                    <Link to="/alumni-profile">Alumni Profile</Link>
+                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/career-resources">Career Resources</NavLink>
+                    <NavLink to="/alumni-connect">Alumni Connect</NavLink>
+                    <NavLink to="/alumni-profile">Alumni Profile</NavLink>
                 </ul>
             </nav>
         </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 import image1 from '../Assets/Img/pexels-pavel-danilyuk-7944035.jpg';  
 import image2 from '../Assets/Img/pexels-uraw-17615709.jpg';
@@ -21,9 +21,9 @@ function OurPride() {
     { src: image6, details: 'Name 6, Graduation year 6, Current Profession - Junior Software Developer' },
   ];
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+  }, [images.length]);
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
@@ -37,7 +37,7 @@ useEffect(() => {
 
 
   return () => clearInterval(interval);
-}, [currentIndex]); 
+}, [handleNext]); 
 
   return (
     <div className='PrideSection'>

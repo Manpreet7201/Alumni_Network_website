@@ -83,6 +83,11 @@
         transition: border-bottom 0.1s ease-in-out ;
     }
 }
+.nav-bar a.active{
+    /* border-bottom: 1px solid #817f7f; */
+    /* margin-bottom: 10px; */
+    color: #EF4545;
+}
 
 @media (max-width: 930px) {
     .nav-bar ul {

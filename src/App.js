@@ -1,6 +1,6 @@
 import './App.css';
-import {BrowserRouter} from 'react-router-dom'
-import { Routes,Route } from 'react-router-dom';
+import {BrowserRouter, Routes,Route } from 'react-router-dom'
+
 import HomePage from './Pages/HomePage';
 import LoginPage from './Pages/LoginPage'
 import AlumniConnect from './Pages/AlumniConnect'
@@ -20,7 +20,7 @@ function App() {
   <Route path="/signup" element={<SignUp />} /> 
   <Route path="/career-resources" element={<CareerResources />} />
   <Route path="/alumni-profile" element={<AlumniProfile />} />
-  <Route path="/profile/:id" element={<Profile />} />
+  <Route path="/alumni-connect/profile/:name" element={<Profile />} />
 
   </Routes>
   </BrowserRouter>

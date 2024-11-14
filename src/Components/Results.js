@@ -35,7 +35,7 @@ const Results = ({ data }) => {
           <div>
           {/* <Link to={`/profile/${profile.id}`} onClick={()=> handleProfileClick(profile)} className='link'>See Profile</Link> */}
             <Link 
-              to={`/profile/${profile.id}`} 
+              to={`/alumni-connect/profile/${profile.name}`} 
               state={{ profile }} 
               className='link'
             >

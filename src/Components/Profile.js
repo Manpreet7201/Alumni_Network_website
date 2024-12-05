@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import '../CSS/AlumniConnect.css';
+// import '../CSS/AlumniProfile.css';
 import ImageAvatar from '../Assets/Img/avatar.jpg';
 import Footer from './Footer';
 import Header from './Header';
@@ -32,7 +32,7 @@ function Profile() {
   };
 
 
-  // Check if profile data is available
+  
   if (!profile) {
     return <div>No profile data available.</div>; 
   }
@@ -45,35 +45,34 @@ function Profile() {
         &lt; - Back
       </section>
     <section id='SeeProfile' className='profile-container'>
-    <h3 className='h3'>Clicked Profile Status</h3>
+    <h3 className='h3'>{profile.firstName}'s Profile Status</h3>
 
     <section className='first-container'>
     <section className='img-container'>
-    {/* <img src={profile.profile_image_url} alt={profile.name} /> */}
     <img src={ImageAvatar} alt={profile.name} />
     </section>
-    <div className='lne'></div>
       <section className='information'>
-      <h1>{profile.name}'s Profile</h1>
-      <p> <span>Company:</span> {profile.company}</p>
-      <p> <span>Job Title:</span> {profile.job_title}</p>
-      <p> <span>Skills:</span> {profile.skills.join(', ')}</p>
+      <h1>{`${profile.firstName.toUpperCase()} ${profile.lastName.toUpperCase()}`} </h1>
+      <p> <span>Company:</span> {profile.companyName}</p>
+      <p> <span>Job Title:</span> {profile.currJob}</p>
+      <p> <span>Skills:</span> {profile.skills}</p>
       <p> <span>Location:</span> {profile.location}</p>
-      <p> <span>Experience:</span> {profile.experience_years} years</p>
-      <p> <span>Mentorship Availability:</span> {profile.mentorship_availability}</p>
+      <p> <span>Experience:</span> {profile.years} years</p>
+      <p> <span>Mentorship Availability:</span> {profile.availability}</p>
         <section>
         <h3>Education Details</h3>
-        <p>{profile.education.years_attended.start_year} - {profile.education.years_attended.end_year}</p>
-        <p> <span>From -</span> {profile.education.university}</p>
-        <p> <span>Collage -</span> {profile.education.college}</p>
-        <p><span>Department -</span> {profile.education.degree}</p>
+        {/* <p>{profile.education.years_attended.start_year} - {profile.education.years_attended.end_year}</p> */}
+        <p> <span>Pass Out Year:</span> {profile.passYear}</p>
+        {/* <p> <span>From -</span> {profile.education.university}</p> */}
+        <p> <span>Collage -</span> {profile.collegeName}</p>
+        <p><span>Department -</span> {profile.programme}</p>
         </section>
       </section>
     </section>
     <section className='section-intro'>
     <h1>A Brief Introduction</h1>
     <section className='brief'>
-      <p>{profile.introduction}</p>
+      <p>{profile.summary}</p>
     </section>
     </section>
     <section className='intro-footer'>
@@ -108,11 +107,11 @@ function Profile() {
               </div>
               <div className='connt-div'>
                 <label>Connect via contact no.</label>
-                <input type="text" value={profile.contact_no} readOnly />
+                <input type="text" value={profile.contactNumber} readOnly />
               </div>
               <div className='connt-div'>
                 <label>Connect via LinkedIn - </label>
-                <input type="text" value={profile.linkedin_profile} readOnly />
+                <input type="text" value={profile.linkedin} readOnly />
               </div>
             </form>
           </div>

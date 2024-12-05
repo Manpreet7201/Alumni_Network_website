@@ -8,14 +8,13 @@
     background-color: #EF4545; 
     padding: 20px 10px;
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end;
     align-items: center;
-    /* width: 100%; */
 }
 
 .login button {
     font-family: 'Maitree';
-    font-size: 26px;
+    font-size: 24px;
     color: white;
     background: none;
     border: none;
@@ -31,7 +30,7 @@
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     width: 100%;
 }
 

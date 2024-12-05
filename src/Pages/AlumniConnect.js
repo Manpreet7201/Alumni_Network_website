@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
@@ -19,19 +20,18 @@ function AlumniConnect() {
   const [alumniProfiles, setAlumniProfiles] = useState([]);
   const [results, setResults] = useState([]);
 
-  useEffect(() =>{
-    const fetchAlumniData = async () =>{
+  useEffect(() => {
+    const fetchAlumniData = async () => {
       try {
-        const response = await fetch('/alumni.json');
-        const data = await response.json();
-        setAlumniProfiles(data);
+        const response = await axios.get('http://localhost:5002/signup/users'); 
+        setAlumniProfiles(response.data); 
+        setResults(response.data);
       } catch (error) {
-        console.log('Error fetching alumni data:', error)
+        console.log('Error fetching alumni data:', error);
       }
     };
     fetchAlumniData();
   }, []);
-
   // const handleSearch = (query) => {
   //   // Filter profiles based on the search query
   //   const filteredResults = alumniProfiles.filter(profile => 
@@ -46,19 +46,20 @@ function AlumniConnect() {
 
   const handleSearch = (query) => {
     setSearchPerformed(true);
-    if(query.trim()===""){
-        setResults([]);
+    if(query.trim() === ""){
+        setResults(alumniProfiles);
         return;
     }
     
     // Filter profiles based on the search query
     const filteredResults = alumniProfiles.filter((profile) => {
-      if (!profile) return false; // Check if profile is undefined
+      if (!profile) return false; 
       return (
-        (profile.name && profile.name.toLowerCase().includes(query.toLowerCase())) ||
-        (profile.company && profile.company.toLowerCase().includes(query.toLowerCase())) ||
+        (profile.firstName && profile.firstName.toLowerCase().includes(query.toLowerCase())) ||
+        (profile.lastName && profile.lastName.toLowerCase().includes(query.toLowerCase())) ||
+        (profile.companyName && profile.companyName.toLowerCase().includes(query.toLowerCase())) ||
         (profile.industry && profile.industry.toLowerCase().includes(query.toLowerCase())) ||
-        (profile.job_title && profile.job_title.toLowerCase().includes(query.toLowerCase())) ||
+        (profile.currJob && profile.currJob.toLowerCase().includes(query.toLowerCase())) ||
         (profile.skills && Array.isArray(profile.skills) && profile.skills.some((skill) => skill.toLowerCase().includes(query.toLowerCase())))
       );
     });
@@ -70,15 +71,17 @@ function AlumniConnect() {
       <Header />
       <Search onSearch={handleSearch} />
 
-      {/* Conditionally render search results or a message */}
       {searchPerformed ? (
         results.length > 0 ? (
           <Results data={results} />
         ) : (
-          <p style={{fontFamily:'Maitree', textAlign: 'center', marginTop: '20px' }}>No Results found</p>
+          <p style={{ fontFamily: 'Maitree', textAlign: 'center', marginTop: '20px' }}>
+            No Results found
+          </p>
         )
       ) : (
         <p style={{fontFamily:'Maitree', textAlign: 'center', marginTop: '20px', fontSize:'1.5rem' }}> Please search for alumni profiles to begin. </p>
+        
       )}
 
       <Link to="/career-resources" className='ready'>Ready to Start</Link>

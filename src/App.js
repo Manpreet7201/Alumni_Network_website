@@ -8,6 +8,7 @@ import SignUp from './Pages/SignUp'
 import CareerResources from './Pages/CareerResourcesPage';
 import AlumniProfile from './Pages/AlumniProfile';
 import Profile from './Components/Profile'; 
+import EditProfile from './Components/EditProfile';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
   <Route path="/career-resources" element={<CareerResources />} />
   <Route path="/alumni-profile" element={<AlumniProfile />} />
   <Route path="/alumni-connect/profile/:name" element={<Profile />} />
+  <Route path="/edit-profile" element={<EditProfile />} />
 
   </Routes>
   </BrowserRouter>

@@ -5,8 +5,10 @@ import { Link } from 'react-router-dom';
 import Header from '../Components/Header'
 import  Footer from '../Components/Footer'
 import '../CSS/LoginPage.css'
+import axios from 'axios';
 
 function SignUp() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: '', 
     lastName: '', 
@@ -19,7 +21,7 @@ function SignUp() {
     regNumber: '',
     contactNumber: '',
     address: '',
-
+    password:'',
     currJob: '',
     companyName: '',
     industry: '',
@@ -35,7 +37,7 @@ function SignUp() {
 
   const [errors, setErrors] = useState({});
   const [showPersonalForm , setShowPersonalForm] = useState(true);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // Validate form data
   const validateForm = () => {
@@ -58,6 +60,17 @@ function SignUp() {
     //   errorElement.classList.add('active');
     //   errorElement.innerText = 'Error message here';
     // }
+
+    // if (!formData.contactNumber || !/^\d{10}$/.test(formData.contactNumber)) {
+    //   isValid = false;
+    //   errors.contactNumber = "Enter a valid 10-digit contact number";
+    // }
+
+    // if (!formData.password || formData.password.length < 8) {
+    //   isValid = false;
+    //   errors.password = 'Password must be at least 8 characters long';
+    // }
+    
     
 
     setErrors(errors);
@@ -81,17 +94,33 @@ function SignUp() {
     setShowPersonalForm(true);
   }
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if(validateForm()){
-      console.log('Form is valid:', formData);
-      alert("Form is Submitted Successfully.");
-      navigate('/');
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   if(validateForm()){
+  //     console.log('Form is valid:', formData);
+  //     alert("Form is Submitted Successfully.");
+  //     navigate('/');
+  //   }
+  //   else {
+  //     alert("Please fill in all required fields correctly.");
+  //   }
+  // }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log("Form Data Submitted: ", formData);
+    try {
+        const response = await axios.post('http://localhost:5002/signup/users', formData);
+        alert(response.data.message); 
+        localStorage.setItem('isLoggedIn', 'true');
+        navigate('/alumni-profile', { state: { email: formData.email } });
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Error submitting form.');
     }
-    else {
-      alert("Please fill in all required fields correctly.");
-    }
-  }
+};
+
+
 
   return (
     <div>
@@ -119,26 +148,27 @@ function SignUp() {
           <div className="form-row">
             <div className="form-group">
               <label htmlFor="programme">Name of the Programme</label>
-              <select id="programme" name="programme" required value={formData.programme} onChange={handleChange}>
-                <option value="btech">B.Tech CSE</option>
-                <option value="btech">B.Tech. CSE Lateral/Migrated</option>
-                <option value="btech">BCA</option>
-                <option value="btech">B.Sc. (Hons.) Agriculture</option>
-                <option value="btech">B.Tech. Food Technology</option>
-                <option value="btech">B.Sc. (Hons. with Research) Life Sciences</option>
-                <option value="btech">B.Sc. (Hons. with Research) Physical Sciences</option>
-                <option value="btech">B.Sc. (Hons. with Research) Microbiology</option>
-                <option value="btech">B.Ed.</option>
-                <option value="btech">B.Sc. (Hons. with Research) Economics</option>
-                <option value="btech">B.Com. (Hons. with Research)</option>
-                <option value="btech">BBA (Hons. with Research)</option>
-                <option value="btech">B.A. (Hons. with Research) Music</option>
-                <option value="btech">B.A. (Hons. with Research) Liberal Arts</option>
-                <option value="btech">B.Sc. (Hons. with Research) Psychology</option>
-                <option value="btech">B.Lib.</option>
-                <option value="btech">B.Sc. Nursing</option>
-                <option value="btech">Certificate Course on Counseling (Mental Health & Substance Abuse)</option>
-                <option value="btech">Certificate Course in Geriatric Care Assistant</option>
+              <select id="programme" name="programme" value={formData.programme} onChange={handleChange} required>
+                <option value="">Choose Programme</option>
+                <option value="btechcse">B.Tech CSE</option>
+                <option value="btechcse-lateral">B.Tech. CSE Lateral/Migrated</option>
+                <option value="bca">BCA</option>
+                <option value="bsc">B.Sc. (Hons.) Agriculture</option>
+                <option value="btech-food-technology">B.Tech. Food Technology</option>
+                <option value="bsc-life-sciences">B.Sc. (Hons. with Research) Life Sciences</option>
+                <option value="bsc-physical-sciences">B.Sc. (Hons. with Research) Physical Sciences</option>
+                <option value="bsc-microbiology">B.Sc. (Hons. with Research) Microbiology</option>
+                <option value="bed">B.Ed.</option>
+                <option value="bsc-economies">B.Sc. (Hons. with Research) Economics</option>
+                <option value="bcom">B.Com. (Hons. with Research)</option>
+                <option value="bba">BBA (Hons. with Research)</option>
+                <option value="ba-music">B.A. (Hons. with Research) Music</option>
+                <option value="ba-liberal-arts">B.A. (Hons. with Research) Liberal Arts</option>
+                <option value="bsc-psychology">B.Sc. (Hons. with Research) Psychology</option>
+                <option value="blib">B.Lib.</option>
+                <option value="bsc-nursing">B.Sc. Nursing</option>
+                {/* <option value="">Certificate Course on Counseling (Mental Health & Substance Abuse)</option>
+                <option value="btech">Certificate Course in Geriatric Care Assistant</option> */}
               </select>
               {/* {errors.programme && <p className="error">{errors.programme}</p>} */}
 
@@ -163,15 +193,14 @@ function SignUp() {
             <div className="form-group">
               <label htmlFor="collegeName">College Name</label>
               <select id="collegeName" name="collegeName" required value={formData.collegeName} onChange={handleChange}>
+                <option value=""> Your College Name</option>
                 <option value="acet">AKAL COLLEGE OF ENGINEERING & TECHNOLOGY</option>
-                <option value="">DR. KHEM SINGH GILL AKAL COLLEGE OF AGRICULTURE</option>
-                <option value="acet">DR. KHEM SINGH GILL AKAL COLLEGE OF AGRICULTURE</option>
-                <option value="acet">DR. KHEM SINGH GILL AKAL COLLEGE OF AGRICULTURE</option>
-                <option value="acet">AKAL COLLEGE OF BASIC SCIENCES</option>
-                <option value="acet">AKAL COLLEGE OF EDUCATION</option>
-                <option value="acet">AKAL COLLEGE OF ECONOMICS, COMMERCE & MANAGEMENT</option>
-                <option value="acet">AKAL COLLEGE OF ARTS & SOCIAL SCIENCES</option>
-                <option value="acet">AKAL COLLEGE OF HEALTH & ALLIED SCIENCES</option>
+                <option value="dks">DR. KHEM SINGH GILL AKAL COLLEGE OF AGRICULTURE</option>
+                <option value="acbs">AKAL COLLEGE OF BASIC SCIENCES</option>
+                <option value="ace">AKAL COLLEGE OF EDUCATION</option>
+                <option value="acetcm">AKAL COLLEGE OF ECONOMICS, COMMERCE & MANAGEMENT</option>
+                <option value="acass">AKAL COLLEGE OF ARTS & SOCIAL SCIENCES</option>
+                <option value="achas">AKAL COLLEGE OF HEALTH & ALLIED SCIENCES</option>
               </select>
             </div>
             <div className="form-group">
@@ -219,6 +248,7 @@ function SignUp() {
             <div className="form-group">
               <label htmlFor="industry">Industry Name</label>
               <select id="industry" name="industry" required value={formData.industry} onChange={handleChange}>
+              <option value="">Select Your Industry</option>
               <option value="information-technology">Information Technology</option>
               <option value="software-development">Software Development</option>
               <option value="data-science">Data Science</option>
@@ -250,14 +280,11 @@ function SignUp() {
           </div>
           <div className="form-row">
             <div className="form-group">
-              <label htmlFor="expLevel">Experience Level</label>
-              <select id='expLevel' name='expLevel' required value={formData.expLevel} onChange={handleChange}>
-                <option value="intern">Intern</option>
-                <option value="entry-level">Entry Level</option>
-                <option value="mid-level">Mid Level</option>
-                <option value="senior-level">Senior Level</option>
-              </select>
-            </div>
+            <label htmlFor="password">Password</label>
+            <input type="password" id="password" name="password" autoComplete="current-password"  required value={formData.password} onChange={handleChange} />
+            {errors.password && <p className="error active">{errors.password}</p>}
+</div>
+
             <div className="form-group">
               <label htmlFor="years">Years of Experience</label>
               <input type="number" id="years" name="years" required value={formData.years} onChange={handleChange}/>
@@ -276,10 +303,8 @@ function SignUp() {
           <div className="form-row">
             <div className="form-group">
               <label htmlFor="availability">Mentorship Availability</label>
-              <select id="availability" name="availability" required value={formData.availability} onChange={handleChange}>
-              <option value="yes">Yes</option>
-              <option value="No">No</option>
-              </select>
+              <input id="availability" name="availability" required value={formData.availability} placeholder='yes or no' onChange={handleChange}>
+              </input>
             </div>
             <div className="form-group">
               <label htmlFor="achievements">Any Achievements or certifications</label>

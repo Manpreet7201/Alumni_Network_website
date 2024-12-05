@@ -24,8 +24,8 @@ function PostLists() {
 
   useEffect(()=>{
     fetch('/posts-data.json')
-    .then(response => response.json())
-    .then(data => setPosts(data));
+    .then((response) => response.json())
+    .then((data) => setPosts(data));
   }, []);
 
   const loadMorePosts = () => {
@@ -61,21 +61,33 @@ function PostLists() {
     setShowNewPostForm(false);
   };
 
-  const handleNewPostClick = ()=>{
-    if (!userRole){
-      const role = window.prompt("Please enter your role (student, alumni, admin):");
-    setUserRole(role.toLowerCase());
+  const handleNewPostClick = () => {
 
-    if (role === 'student') {
-      alert("You are not authenticated to post a new post.")
-      alert("Only our alumni or admins can post.....!")
-    }
-    }
-
-    if (userRole !== 'student') {
-      setShowNewPostForm(true);
-    }
+    if (!userRole) {
+      const role = window.prompt("Please enter your role (student, alumni, admin):").toLowerCase();
+      setUserRole(role);
+  
+      if (role === "student") {
+        alert("You are not authorized to post. Only alumni or admins can create posts.");
+        return; 
+      } else if (role === "alumni" || role === "admin") {
+        alert(`Welcome, ${role}! You can create a post.`);
+        setShowNewPostForm(true); 
+      } else {
+        alert("Invalid role entered. Please try again.");
+        return; 
+      }
+    } 
+    // else {
+  
+    //   // if (userRole === "student") {
+    //   //   alert("You are not authorized to post.");
+    //   // } else {
+    //   //   setShowNewPostForm(true); 
+    //   // }
+    // }
   };
+  
   // const handleClick = () => {
   //   navigate.
   // }
@@ -95,7 +107,7 @@ function PostLists() {
     <div className='sorting'>
     <label> Sort By:- </label>
       <select value={filter} onChange={(e)=>setFilter(e.target.value)}>
-      <option value= "latest">Latest Posts</option>
+      <option value= "latest">Latest Posts</option>                                                                                                                      
       <option value="all">All Posts</option>
       </select>
     </div>
@@ -105,28 +117,29 @@ function PostLists() {
       </div>
 
       {showNewPostForm && (
-        <div className="new-post-form">
-          <h2>Create New Post</h2>
-          <form onSubmit={(e) => {
-            e.preventDefault();
-            const newPost = {
-              id: Date.now(),
-              title: e.target.title.value,
-              content: e.target.content.value,
-              author: 'Current User', 
-              date: new Date().toISOString(),
-            };
-            handleNewPost(newPost);
-          }}>
-            <label>Title</label>
-            <input type="text" name="title" required />
-            <label>Content</label>
-            <textarea name="content" required></textarea>
-            <button type="submit">Post</button>
-            <button type="button" onClick={() => setShowNewPostForm(false)}>Cancel</button>
-          </form>
-        </div>
-      )}
+  <div className="new-post-form">
+    <h2>Create New Post</h2>
+    <form onSubmit={(e) => {
+      e.preventDefault();
+      const newPost = {
+        id: Date.now(),
+        title: e.target.title.value,
+        content: e.target.content.value,
+        author: `${userRole}`, 
+        date: new Date().toISOString(),
+      };
+      handleNewPost(newPost);
+    }}>
+      <label>Title</label>
+      <input type="text" name="title" required />
+      <label>Content</label>
+      <textarea name="content" required></textarea>
+      <button type="submit">Post</button>
+      <button type="button" onClick={() => setShowNewPostForm(false)}>Cancel</button>
+    </form>
+  </div>
+)}
+
 
 
     </div>

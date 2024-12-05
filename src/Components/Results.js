@@ -27,15 +27,15 @@ const Results = ({ data }) => {
             <img src={ImageAvatar} alt={profile.name} />
           </div>
           <div className='profile-info'>
-            <h3>{profile.name}</h3>
-            <p> <span className='dark'>Company: </span>  {profile.company}</p>
-            <p> <span className='dark'>Job Title:</span>  {profile.job_title}</p>
-            <p> <span className='dark'>Skills:</span>  {profile.skills.join(', ')}</p>
+            <h3>{`${profile.firstName.toUpperCase()} ${profile.lastName.toUpperCase()}`}</h3>
+            <p> <span className='dark'>Company: </span>  {profile.companyName}</p>
+            <p> <span className='dark'>Job Title:</span>  {profile.currJob}</p>
+            <p> <span className='dark'>Skills:</span>  {profile.skills}</p>
           </div>
           <div>
           {/* <Link to={`/profile/${profile.id}`} onClick={()=> handleProfileClick(profile)} className='link'>See Profile</Link> */}
             <Link 
-              to={`/alumni-connect/profile/${profile.name}`} 
+              to={`/alumni-connect/profile/${profile.firstName}`} 
               state={{ profile }} 
               className='link'
             >
